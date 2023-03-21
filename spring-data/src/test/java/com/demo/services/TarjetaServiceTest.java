@@ -16,7 +16,7 @@ class TarjetaServiceTest {
         TarjetaDto tarjetaDto = new TarjetaDto();
         tarjetaDto.setId(1);
         tarjetaDto.setEstado(false);
-        Tarjeta tarjeta = tarjetaService.cambiarEstadoTarjetaPorId(tarjetaDto);
-        assertEquals(false, tarjeta.getEstado());
+        tarjetaService.cambiarEstadoTarjetaPorId(tarjetaDto);
+        assertEquals(false, tarjetaDto.getEstado());
     }
 }
