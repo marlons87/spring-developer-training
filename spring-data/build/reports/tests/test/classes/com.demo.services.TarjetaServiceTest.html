@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=edge"/>
+<title>Test results - TarjetaServiceTest</title>
+<link href="../css/base-style.css" rel="stylesheet" type="text/css"/>
+<link href="../css/style.css" rel="stylesheet" type="text/css"/>
+<script src="../js/report.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="content">
+<h1>TarjetaServiceTest</h1>
+<div class="breadcrumbs">
+<a href="../index.html">all</a> &gt; 
+<a href="../packages/com.demo.services.html">com.demo.services</a> &gt; TarjetaServiceTest</div>
+<div id="summary">
+<table>
+<tr>
+<td>
+<div class="summaryGroup">
+<table>
+<tr>
+<td>
+<div class="infoBox" id="tests">
+<div class="counter">1</div>
+<p>tests</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="failures">
+<div class="counter">0</div>
+<p>failures</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="ignored">
+<div class="counter">0</div>
+<p>ignored</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="duration">
+<div class="counter">0.678s</div>
+<p>duration</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+<td>
+<div class="infoBox success" id="successRate">
+<div class="percent">100%</div>
+<p>successful</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div id="tabs">
+<ul class="tabLinks">
+<li>
+<a href="#tab0">Tests</a>
+</li>
+<li>
+<a href="#tab1">Standard output</a>
+</li>
+</ul>
+<div id="tab0" class="tab">
+<h2>Tests</h2>
+<table>
+<thead>
+<tr>
+<th>Test</th>
+<th>Duration</th>
+<th>Result</th>
+</tr>
+</thead>
+<tr>
+<td class="success">cambiarEstadoTarjetaPorId()</td>
+<td class="success">0.678s</td>
+<td class="success">passed</td>
+</tr>
+</table>
+</div>
+<div id="tab1" class="tab">
+<h2>Standard output</h2>
+<span class="code">
+<pre>16:28:29.838 [Test worker] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [TarjetaServiceTest]: using SpringBootContextLoader
+16:28:29.848 [Test worker] DEBUG org.springframework.test.context.support.AbstractContextLoader - Could not detect default resource locations for test class [com.demo.services.TarjetaServiceTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+16:28:29.849 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.demo.services.TarjetaServiceTest]: TarjetaServiceTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+16:28:29.919 [Test worker] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Using ContextCustomizers for test class [TarjetaServiceTest]: [DisableObservabilityContextCustomizer, PropertyMappingContextCustomizer, Customizer, ExcludeFilterContextCustomizer, DuplicateJsonObjectContextCustomizer, MockitoContextCustomizer, TestRestTemplateContextCustomizer]
+16:28:30.137 [Test worker] DEBUG org.springframework.context.annotation.ClassPathScanningCandidateComponentProvider - Identified candidate component class: file [D:\Fuentes\EC Servicios\Capacitacion Java\spring-developer-training\spring-data\build\classes\java\main\com\demo\SpringDataApplication.class]
+16:28:30.145 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.demo.SpringDataApplication for test class com.demo.services.TarjetaServiceTest
+16:28:30.523 [Test worker] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Using TestExecutionListeners for test class [TarjetaServiceTest]: [ServletTestExecutionListener, DirtiesContextBeforeModesTestExecutionListener, ApplicationEventsTestExecutionListener, MockitoTestExecutionListener, DependencyInjectionTestExecutionListener, DirtiesContextTestExecutionListener, TransactionalTestExecutionListener, SqlScriptsTestExecutionListener, EventPublishingTestExecutionListener, RestDocsTestExecutionListener, MockRestServiceServerResetTestExecutionListener, MockMvcPrintOnlyOnFailureTestExecutionListener, WebDriverTestExecutionListener, MockWebServiceServerTestExecutionListener, ResetMocksTestExecutionListener]
+16:28:30.529 [Test worker] DEBUG org.springframework.test.context.support.AbstractDirtiesContextTestExecutionListener - Before test class: class [TarjetaServiceTest], class annotated with @DirtiesContext [false] with mode [null]
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v3.0.4)
+
+2023-03-21T16:28:31.842-06:00  INFO 25944 --- [    Test worker] com.demo.services.TarjetaServiceTest     : Starting TarjetaServiceTest using Java 17.0.6 with PID 25944 (started by marlon.soto in D:\Fuentes\EC Servicios\Capacitacion Java\spring-developer-training\spring-data)
+2023-03-21T16:28:31.845-06:00  INFO 25944 --- [    Test worker] com.demo.services.TarjetaServiceTest     : No active profile set, falling back to 1 default profile: &quot;default&quot;
+2023-03-21T16:28:33.685-06:00  INFO 25944 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-03-21T16:28:34.221-06:00  INFO 25944 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 498 ms. Found 5 JPA repository interfaces.
+2023-03-21T16:28:36.054-06:00  INFO 25944 --- [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-03-21T16:28:36.249-06:00  INFO 25944 --- [    Test worker] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.1.7.Final
+2023-03-21T16:28:37.229-06:00  INFO 25944 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-03-21T16:28:37.899-06:00  INFO 25944 --- [    Test worker] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:file:~/ejemplo_db user=
+2023-03-21T16:28:37.906-06:00  INFO 25944 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-03-21T16:28:37.968-06:00  INFO 25944 --- [    Test worker] SQL dialect                              : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+Hibernate: drop table if exists cliente cascade 
+Hibernate: drop table if exists cuenta cascade 
+Hibernate: drop table if exists direccion cascade 
+Hibernate: drop table if exists inversion cascade 
+Hibernate: drop table if exists tarjeta cascade 
+Hibernate: create table cliente (id integer generated by default as identity, apellidos varchar(30), cedula varchar(9), nombre varchar(255), pais_nacimiento varchar(255), telefono varchar(255), primary key (id))
+Hibernate: create table cuenta (id integer generated by default as identity, estado boolean, numero varchar(255), tipo varchar(255), cliente_id integer, primary key (id))
+Hibernate: create table direccion (id integer generated by default as identity, direccion varchar(30), nomenclatura varchar(30), cliente_id integer, primary key (id))
+Hibernate: create table inversion (id integer not null, numero varchar(255), tipo varchar(255), cliente_id integer, primary key (id))
+Hibernate: create table tarjeta (id integer generated by default as identity, estado boolean, numero varchar(255), tipo varchar(255), cliente_id integer, primary key (id))
+Hibernate: alter table if exists cuenta add constraint FK4p224uogyy5hmxvn8fwa2jlug foreign key (cliente_id) references cliente
+Hibernate: alter table if exists direccion add constraint FK2t6fhjqxc6ln670rigl9crmmn foreign key (cliente_id) references cliente
+Hibernate: alter table if exists inversion add constraint FKg5ca1mjqsbaiq0nb71378bkyq foreign key (cliente_id) references cliente
+Hibernate: alter table if exists tarjeta add constraint FK64s3iwifnd3gi9pyigfrensvf foreign key (cliente_id) references cliente
+2023-03-21T16:28:40.311-06:00  INFO 25944 --- [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-03-21T16:28:40.332-06:00  INFO 25944 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-03-21T16:28:42.954-06:00  WARN 25944 --- [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-03-21T16:28:43.721-06:00  INFO 25944 --- [    Test worker] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2'. Database available at 'jdbc:h2:file:~/ejemplo_db'
+2023-03-21T16:28:43.962-06:00  INFO 25944 --- [    Test worker] com.demo.services.TarjetaServiceTest     : Started TarjetaServiceTest in 13.157 seconds (process running for 16.126)
+Hibernate: select t1_0.id,c1_0.id,c1_0.apellidos,c1_0.cedula,c1_0.nombre,c1_0.pais_nacimiento,c1_0.telefono,t1_0.estado,t1_0.numero,t1_0.tipo from tarjeta t1_0 left join cliente c1_0 on c1_0.id=t1_0.cliente_id where t1_0.id=?
+Hibernate: update tarjeta set cliente_id=?, estado=?, numero=?, tipo=? where id=?
+</pre>
+</span>
+</div>
+</div>
+<div id="footer">
+<p>
+<div>
+<label class="hidden" id="label-for-line-wrapping-toggle" for="line-wrapping-toggle">Wrap lines
+<input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
+</label>
+</div>Generated by 
+<a href="http://www.gradle.org">Gradle 7.6.1</a> at 21 mar. 2023 16:28:45</p>
+</div>
+</div>
+</body>
+</html>

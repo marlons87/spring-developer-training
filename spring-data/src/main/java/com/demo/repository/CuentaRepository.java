@@ -10,4 +10,5 @@ import org.springframework.stereotype.Repository;
 public interface CuentaRepository extends JpaRepository<Cuenta, Integer>, JpaSpecificationExecutor<Cuenta> {
     void deleteAllByCliente_Id(int clienteId);
 
+    //List<Cuenta> findByCliente_id(int );
 }

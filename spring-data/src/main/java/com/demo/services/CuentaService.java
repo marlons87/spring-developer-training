@@ -25,9 +25,8 @@ public class CuentaService {
         return cuentaDto;
     }
 
-    /*public List<CuentaDto> buscarCuentasDinamicamentePorCriterio(CuentaDto cuentaDtoFilter){
-        return CuentaSpecification.findAll(CuentaSpecification.buildFilter(cuentaDtoFilter))
+    public List<CuentaDto> buscarCuentasDinamicamentePorCriterio(CuentaDto cuentaDtoFilter){
+        return cuentaRepository.findAll(cuentaSpecification.buildFilter(cuentaDtoFilter))
                 .stream().map(this::fromCuentaToDto).collect(Collectors.toList());
-
-    }*/
+    }
 }
