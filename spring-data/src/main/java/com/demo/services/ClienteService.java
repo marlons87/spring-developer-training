@@ -2,7 +2,10 @@ package com.demo.services;
 
 import com.demo.criteria.ClienteSpecification;
 import com.demo.dto.ClienteDto;
+import com.demo.dto.CuentaDto;
+import com.demo.dto.ProductosDto;
 import com.demo.model.Cliente;
+import com.demo.model.Cuenta;
 import com.demo.repository.ClienteRepository;
 import com.demo.repository.CuentaRepository;
 import com.demo.repository.DireccionRepository;
@@ -138,4 +141,21 @@ public class ClienteService {
         return null;
     }*/
 
+    private CuentaDto fromCuentaToDto(Cuenta cuenta){
+        CuentaDto cuentaDto = new CuentaDto();
+        BeanUtils.copyProperties(cuenta, cuentaDto);
+        return cuentaDto;
+    }
+    public ProductosDto obtenerTodosLosProductosDeUnClientePorId(int id){
+        ProductosDto productosDto = new ProductosDto();
+        List<CuentaDto> cuentaDtos = new ArrayList<>();
+        cuentaRepository.findByCliente_Id(id).forEach(
+                cuenta -> {
+                    CuentaDto cuentaDto;
+                    cuentaDto = fromCuentaToDto(cuenta);
+                    cuentaDtos.add(cuentaDto);
+                });
+        productosDto.setCuentaDtos(cuentaDtos);
+        return productosDto;
+    }
 }
