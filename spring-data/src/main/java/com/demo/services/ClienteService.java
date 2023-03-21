@@ -1,14 +1,15 @@
 package com.demo.services;
 
 import com.demo.criteria.ClienteSpecification;
-import com.demo.dto.ClienteDto;
-import com.demo.dto.CuentaDto;
-import com.demo.dto.ProductosDto;
+import com.demo.dto.*;
 import com.demo.model.Cliente;
 import com.demo.model.Cuenta;
+import com.demo.model.Inversion;
+import com.demo.model.Tarjeta;
 import com.demo.repository.ClienteRepository;
 import com.demo.repository.CuentaRepository;
 import com.demo.repository.DireccionRepository;
+import com.demo.repository.TarjetaRepository;
 import jakarta.persistence.Tuple;
 import jakarta.transaction.Transactional;
 import lombok.AllArgsConstructor;
@@ -26,6 +27,7 @@ public class ClienteService {
     private ClienteRepository clienteRepository;
     private DireccionRepository direccionRepository;
     private CuentaRepository cuentaRepository;
+    private TarjetaRepository tarjetaRepository;
     private ClienteSpecification clienteSpecification;
 
     public void insertarCliente (ClienteDto clienteDto){
@@ -146,6 +148,17 @@ public class ClienteService {
         BeanUtils.copyProperties(cuenta, cuentaDto);
         return cuentaDto;
     }
+    private TarjetaDto fromTarjetaToDto(Tarjeta tarjeta) {
+        TarjetaDto tarjetaDto = new TarjetaDto();
+        BeanUtils.copyProperties(tarjeta, tarjetaDto);
+        return tarjetaDto;
+    }
+
+    private InversionDto fromInversionToDto(Inversion inversion) {
+        InversionDto inversionDto = new InversionDto();
+        BeanUtils.copyProperties(inversion, inversionDto);
+        return inversionDto;
+    }
     public ProductosDto obtenerTodosLosProductosDeUnClientePorId(int id){
         ProductosDto productosDto = new ProductosDto();
         List<CuentaDto> cuentaDtos = new ArrayList<>();
@@ -156,6 +169,17 @@ public class ClienteService {
                     cuentaDtos.add(cuentaDto);
                 });
         productosDto.setCuentaDtos(cuentaDtos);
+
+        List<TarjetaDto> tarjetaDtos = new ArrayList<>();
+        tarjetaRepository.findByCliente_Id(id).forEach(
+                tarjeta -> {
+                    TarjetaDto tarjetaDto;
+                    tarjetaDto = fromTarjetaToDto(tarjeta);
+                    tarjetaDtos.add(tarjetaDto);
+                });
+        productosDto.setCuentaDtos(cuentaDtos);
+
+
         return productosDto;
     }
 }
