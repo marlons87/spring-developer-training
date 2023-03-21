@@ -10,6 +10,7 @@ import lombok.Setter;
 @Setter
 public class Direccion {
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     @Column(length = 30)
     private String direccion;

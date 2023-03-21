@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.demo.services.ClienteServiceTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2023-03-21T00:53:36" hostname="DELL-LAT-C553" time="0.974">
+  <properties/>
+  <testcase name="buscarClientesDinamicamentePorCriterio()" classname="com.demo.services.ClienteServiceTest" time="0.974"/>
+  <system-out><![CDATA[18:53:23.047 [Test worker] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [ClienteServiceTest]: using SpringBootContextLoader
+18:53:23.061 [Test worker] DEBUG org.springframework.test.context.support.AbstractContextLoader - Could not detect default resource locations for test class [com.demo.services.ClienteServiceTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+18:53:23.063 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.demo.services.ClienteServiceTest]: ClienteServiceTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+18:53:23.131 [Test worker] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Using ContextCustomizers for test class [ClienteServiceTest]: [DisableObservabilityContextCustomizer, PropertyMappingContextCustomizer, Customizer, ExcludeFilterContextCustomizer, DuplicateJsonObjectContextCustomizer, MockitoContextCustomizer, TestRestTemplateContextCustomizer]
+18:53:23.357 [Test worker] DEBUG org.springframework.context.annotation.ClassPathScanningCandidateComponentProvider - Identified candidate component class: file [D:\Fuentes\EC Servicios\Capacitacion Java\spring-developer-training\spring-data\build\classes\java\main\com\demo\SpringDataApplication.class]
+18:53:23.363 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.demo.SpringDataApplication for test class com.demo.services.ClienteServiceTest
+18:53:23.697 [Test worker] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Using TestExecutionListeners for test class [ClienteServiceTest]: [ServletTestExecutionListener, DirtiesContextBeforeModesTestExecutionListener, ApplicationEventsTestExecutionListener, MockitoTestExecutionListener, DependencyInjectionTestExecutionListener, DirtiesContextTestExecutionListener, TransactionalTestExecutionListener, SqlScriptsTestExecutionListener, EventPublishingTestExecutionListener, RestDocsTestExecutionListener, MockRestServiceServerResetTestExecutionListener, MockMvcPrintOnlyOnFailureTestExecutionListener, WebDriverTestExecutionListener, MockWebServiceServerTestExecutionListener, ResetMocksTestExecutionListener]
+18:53:23.703 [Test worker] DEBUG org.springframework.test.context.support.AbstractDirtiesContextTestExecutionListener - Before test class: class [ClienteServiceTest], class annotated with @DirtiesContext [false] with mode [null]
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v3.0.4)
+
+2023-03-20T18:53:24.644-06:00  INFO 25520 --- [    Test worker] com.demo.services.ClienteServiceTest     : Starting ClienteServiceTest using Java 17.0.6 with PID 25520 (started by marlon.soto in D:\Fuentes\EC Servicios\Capacitacion Java\spring-developer-training\spring-data)
+2023-03-20T18:53:24.649-06:00  INFO 25520 --- [    Test worker] com.demo.services.ClienteServiceTest     : No active profile set, falling back to 1 default profile: "default"
+2023-03-20T18:53:26.786-06:00  INFO 25520 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-03-20T18:53:27.099-06:00  INFO 25520 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 290 ms. Found 5 JPA repository interfaces.
+2023-03-20T18:53:28.583-06:00  INFO 25520 --- [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-03-20T18:53:28.817-06:00  INFO 25520 --- [    Test worker] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.1.7.Final
+2023-03-20T18:53:29.946-06:00  INFO 25520 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-03-20T18:53:30.619-06:00  INFO 25520 --- [    Test worker] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:file:~/ejemplo_db user=
+2023-03-20T18:53:30.624-06:00  INFO 25520 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-03-20T18:53:30.687-06:00  INFO 25520 --- [    Test worker] SQL dialect                              : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+Hibernate: drop table if exists cliente cascade 
+Hibernate: drop table if exists cuenta cascade 
+Hibernate: drop table if exists direccion cascade 
+Hibernate: drop table if exists inversion cascade 
+Hibernate: drop table if exists tarjeta cascade 
+Hibernate: create table cliente (id integer generated by default as identity, apellidos varchar(30), cedula varchar(9), nombre varchar(255), pais_nacimiento varchar(255), telefono varchar(255), primary key (id))
+Hibernate: create table cuenta (id integer generated by default as identity, estado boolean, numero varchar(255), tipo varchar(255), cliente_id integer, primary key (id))
+Hibernate: create table direccion (id integer generated by default as identity, direccion varchar(30), nomenclatura varchar(30), cliente_id integer, primary key (id))
+Hibernate: create table inversion (id integer not null, numero varchar(255), tipo varchar(255), cliente_id integer, primary key (id))
+Hibernate: create table tarjeta (id integer generated by default as identity, estado boolean, numero varchar(255), tipo varchar(255), cliente_id integer, primary key (id))
+Hibernate: alter table if exists cuenta add constraint FK4p224uogyy5hmxvn8fwa2jlug foreign key (cliente_id) references cliente
+Hibernate: alter table if exists direccion add constraint FK2t6fhjqxc6ln670rigl9crmmn foreign key (cliente_id) references cliente
+Hibernate: alter table if exists inversion add constraint FKg5ca1mjqsbaiq0nb71378bkyq foreign key (cliente_id) references cliente
+Hibernate: alter table if exists tarjeta add constraint FK64s3iwifnd3gi9pyigfrensvf foreign key (cliente_id) references cliente
+2023-03-20T18:53:32.527-06:00  INFO 25520 --- [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-03-20T18:53:32.546-06:00  INFO 25520 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-03-20T18:53:35.064-06:00  WARN 25520 --- [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-03-20T18:53:35.907-06:00  INFO 25520 --- [    Test worker] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2'. Database available at 'jdbc:h2:file:~/ejemplo_db'
+2023-03-20T18:53:36.137-06:00  INFO 25520 --- [    Test worker] com.demo.services.ClienteServiceTest     : Started ClienteServiceTest in 12.157 seconds (process running for 16.622)
+Terms of Criteria:ClienteDto(id=0, nombre=null, apellido=PEREZ, cedula=null, telefono=null, direccionsDto=null, paisNacimiento=null, cuentas=null)
+Hibernate: select c1_0.id,c1_0.apellidos,c1_0.cedula,c1_0.nombre,c1_0.pais_nacimiento,c1_0.telefono from cliente c1_0 where upper(c1_0.apellidos) like ? escape ''
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
